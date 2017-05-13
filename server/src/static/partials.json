@@ -6,11 +6,22 @@
     "^/weeklypurpose$": "weeklypurpose",
     "^/blog/(\\?.+=.+(&(.+=.+))*)?$": "blog",
     "^/blog/([a-zA-Z0-9\\-]{10,})$": "article",
+    "^/subscribed": "subscribed",
+    "^/already-subscribed": "already-subscribed",
+    "^/error": "error",
     "404": "404"
   },
   "partials": {
     "404": {
       "path": "partials/404.html",
+      "assets": {
+        "styles": ["/assets/css/404.css"],
+        "scripts": {}
+      },
+      "partials": ["head"]
+    },
+    "error": {
+      "path": "partials/error.html",
       "assets": {
         "styles": ["/assets/css/404.css"],
         "scripts": {}
@@ -49,6 +60,22 @@
         "scripts": {"foot": ["{{bundle}}"]}
       },
       "partials": ["head", "footer_marketing", "navbar"]
+    },
+    "already-subscribed": {
+      "path": "partials/emailAlreadyDatabase.html",
+      "assets": {
+        "styles": ["/assets/css/joinedNewsletterNIGHT.css"],
+        "scripts": {}
+      },
+      "partials": ["head"]
+    },
+    "subscribed": {
+      "path": "partials/joinedNewsletter.html",
+      "assets": {
+        "styles": ["/assets/css/joinedNewsletterNIGHT.css"],
+        "scripts": {}
+      },
+      "partials": ["head"]
     },
     "weeklypurpose": {
       "path": "partials/subscribe.html",
